@@ -5,12 +5,11 @@
  * 
  */
 
-import java.security.SecureRandom;
-import java.util.Random;
-import java.util.Scanner;
 
-public class ProgramaAritmetico {
-    public static void main(String[] args) {
+public class programajava {
+    private static int tipoProblema;
+
+	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         SecureRandom random = new SecureRandom();
         
@@ -48,21 +47,17 @@ public class ProgramaAritmetico {
         System.out.println(porcentajeCorrecto < 75 ? "Por favor pide ayuda adicional a tu instructor." : "¡Felicidades, estás listo para pasar al siguiente nivel!");
     }
     
-    public static int obtenerEntero(Scanner scanner, String mensaje) {
-        System.out.print(mensaje);
-        return scanner.nextInt();
-    }
-    
-    public static int calcularRespuesta() {
-    	>         return (int) (tipoProblema == 4 ? (double) num1 / num2 : evaluar (num1 + "*-+".charAt(tipoProblema - 1) + num2));
-    }
-    
-    private static int evaluar(int i) {
+    private static int calcularRespuesta() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
-	public static void evaluar(String expresion) {
+	public static int obtenerEntero(Scanner scanner, String mensaje) {
+        System.out.print(mensaje);
+        return scanner.nextInt();
+    }
+    
+    public static void evaluar(String expresion) {
        
     }
     
@@ -70,4 +65,14 @@ public class ProgramaAritmetico {
         String[] mensajes = exito ? new String[]{"¡Muy bien!", "¡Excelente!", "¡Buen trabajo!", "¡Sigue así!"} : new String[]{"No. Por favor intenta de nuevo.", "Incorrecto. Intenta una vez más.", "¡No te rindas!", "No. Sigue intentando."};
         return mensajes[new SecureRandom().nextInt(mensajes.length)];
     }
+
+	public static int getTipoProblema() {
+		return tipoProblema;
+	}
+
+	public static void setTipoProblema(int tipoProblema) {
+		PROGRAMACIÓNJAVA.tipoProblema = tipoProblema;
+		System.out.print("biemvenidos a EDGAR5174 coding");
+		
+	}
 }
